@@ -1,0 +1,2 @@
+export const LOAD_CONTENT= "LOAD_CONTENT";
+export const GET_CONTENT= "GET_CONTENT";
