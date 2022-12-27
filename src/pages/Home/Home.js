@@ -8,7 +8,7 @@ const Home = () => {
                 
             </div>
             <div className='flex justify-between my-4'>
-                <h1 className='text-3xl'>Recent Blogs</h1>
+                <h1 className='text-2xl text-blue-900 font-bold'>Recent Blogs</h1>
                 <select className="select select-info w-40 max-w-xs">
                     <option disabled selected>Sort By</option>
                     <option>Sort by last upload</option>

@@ -11,16 +11,16 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">Dashboard</Link></li>
+                        <li><Link to="/dashboard">Dashboard</Link></li>
                         <li><Link to="/">History</Link></li>
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl">True Way</Link>
+                <Link to="/" className="btn btn-ghost normal-case text-3xl">True Way Blog</Link>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/">Dashboard</Link></li>
+                    <li><Link to="/dashboard">Dashboard</Link></li>
                     <li><Link to="/">History</Link></li>
                 </ul>
             </div>
