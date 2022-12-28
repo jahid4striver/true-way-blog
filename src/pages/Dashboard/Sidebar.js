@@ -12,15 +12,15 @@ const Sidebar = () => {
     const [openSubmenuItems, setOpenSubmenuItems] = useState(true)
 
     const menus = [
-        { title: "Add A Blog", tooltip: "Add A Blog", icon: ImBlog, link:"/add_a_blog" },
+        { title: "Add A Blog", tooltip: "Add A Blog", icon: ImBlog, link:"add_a_blog" },
         { title: "All Blogs", tooltip: "All Blogs", icon: FaMicroblog, link:"all_blogs" },
         { title: "Home", tooltip: "Home", icon: FaHome, spacing:true, link:"/" },
     ]
 
 
     return (
-        <div className="flex">
-            <div className={`bg-purple-900 h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
+        <div className="flex duration-500">
+            <div className={`bg-dark-purple h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
                 <BsArrowLeftShort onClick={() => setOpen(!open)} className={`text-3xl bg-white rounded-full absolute -right-3 top-9
        border border-dark-purple cursor-pointer ${!open && "rotate-180"}`}></BsArrowLeftShort>
                 <div className='inline-flex'>
@@ -31,7 +31,7 @@ const Sidebar = () => {
                 <ul className='pt-2 mt-8'>
                     {menus.map((menu, index) =>
                         <>
-                            <li className={`text-orange-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md hover:bg-light-white ${menu.spacing ? "mt-96" : "mt-2"}`} key={index}>
+                            <li className={`text-orange-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md hover:bg-light-white duration-500 ${menu.spacing ? "mt-96" : "mt-2"}`} key={index}>
                                 <Link to={menu.link} className='text-2xl block float-left'>
                                     {menu.icon ? <menu.icon /> : <MdDashboard title={menu.tooltip} />}
                                 </Link>
