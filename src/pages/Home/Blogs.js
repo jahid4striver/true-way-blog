@@ -1,14 +1,24 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { readBlogs } from '../../redux/actions/blogActions';
 import loadBlogsData from '../../redux/thunk/blogs/fetchBlogs';
 
 const Blogs = () => {
+    const navigate= useNavigate();
     const dispatch = useDispatch();
-    const blogs = useSelector((state) => state.blogs);
+    const blogs = useSelector((state) => state.blogs.blogs);
     const { tags } = blogs;
 
-    console.log(tags);
+    console.log(blogs);
+
+    const selectedBlogs=(id)=>{
+        const selectedForRead= blogs.filter(blog=>blog._id===id);
+        dispatch(readBlogs(selectedForRead));
+        navigate(`/${id}`)
+
+    }
 
     useEffect(() => {
         dispatch(loadBlogsData())
@@ -26,7 +36,7 @@ const Blogs = () => {
                             <p>{blog.description.slice(0 - 100)}</p>
                             <p>Created: {blog.date}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn bg-blue-900 text-orange-300 hover:bg-blue-800">Read More</button>
+                                <button onClick={()=>selectedBlogs(blog._id)} className="btn bg-blue-900 text-orange-300 hover:bg-blue-800">Read More</button>
                             </div>
                             <div className='flex w-10'>
                                 {

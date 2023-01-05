@@ -4,7 +4,7 @@ import { AiFillEdit,AiFillDelete } from "react-icons/ai";
 
 
 const AllBlogs = () => {
-    const blogs = useSelector((state => state.blogs))
+    const blogs = useSelector((state => state.blogs.blogs))
     console.log(blogs);
 
     return (

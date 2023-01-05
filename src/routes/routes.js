@@ -2,6 +2,7 @@ import AddBlogs from "../pages/Dashboard/AddBlogs";
 import AllBlogs from "../pages/Dashboard/AllBlogs";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Home from "../pages/Home/Home";
+import ReadBlogs from "../pages/Home/ReadBlogs";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../layout/Main");
@@ -15,6 +16,10 @@ const routes = createBrowserRouter([{
         {
             path: "/",
             element: <Home />,
+        },
+        {
+            path: "/:blogId",
+            element: <ReadBlogs/>
         }
     ],
 

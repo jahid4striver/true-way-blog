@@ -1,7 +1,8 @@
-import { LOAD_CONTENT } from "../actionTypes/actionTypes";
+import { LOAD_CONTENT, READ_CONTENT } from "../actionTypes/actionTypes";
 
 const initialState={
-    blogs:[]
+    blogs:[],
+    read:[],
 }
 
 const blogReducer=(state= initialState, action)=>{
@@ -11,8 +12,11 @@ const blogReducer=(state= initialState, action)=>{
                 ...state,
                 blogs: action.payload
             }
-
-
+        case READ_CONTENT:
+            return{
+                ...state,
+                read:action.payload
+            }
          default:
         return state;
     }

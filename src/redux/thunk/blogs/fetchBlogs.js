@@ -12,4 +12,5 @@ const loadBlogsData= ()=>{
     }
 }
 
+
 export default loadBlogsData;
