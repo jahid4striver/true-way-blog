@@ -14,7 +14,7 @@ const AddBlogs = () => {
             date: date,
             title: title,
             img: imgLink,
-            tags: [tag1, tag2, tag3],
+            tags: [{name:tag1}, {name:tag2}, {name:tag3}],
             description: description,
         }
 

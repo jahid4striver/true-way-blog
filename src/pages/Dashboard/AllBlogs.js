@@ -1,11 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { AiFillEdit,AiFillDelete } from "react-icons/ai";
+import { deleteBlogs } from '../../redux/actions/blogActions';
+import deleteBlogFromServer from '../../redux/thunk/blogs/deleteBlogFromServer';
 
 
 const AllBlogs = () => {
+    const dispatch= useDispatch();
     const blogs = useSelector((state => state.blogs.blogs))
     console.log(blogs);
+
+    const deleteBlogFn= (id)=>{
+        dispatch(deleteBlogs(id));
+        dispatch(deleteBlogFromServer(id));
+    }
 
     return (
         <div className='w-full text-center mx-auto'>
@@ -32,7 +40,7 @@ const AllBlogs = () => {
                                 <td>{blog.title}</td>
                                 <td>{blog.description.slice(0,40)}</td>
                                 <td><button className='text-2xl'><AiFillEdit/></button></td>
-                                <td><button className='text-2xl'><AiFillDelete/></button></td>
+                                <td><button onClick={()=>deleteBlogFn(blog._id)} className='text-2xl'><AiFillDelete/></button></td>
                             </tr>)
                         }
                     </tbody>
