@@ -1,6 +1,7 @@
 import AddBlogs from "../pages/Dashboard/AddBlogs";
 import AllBlogs from "../pages/Dashboard/AllBlogs";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import EditBlogs from "../pages/Dashboard/EditBlogs";
 import Home from "../pages/Home/Home";
 import ReadBlogs from "../pages/Home/ReadBlogs";
 
@@ -19,26 +20,30 @@ const routes = createBrowserRouter([{
         },
         {
             path: "/:blogId",
-            element: <ReadBlogs/>
+            element: <ReadBlogs />
         }
     ],
 
 },
 {
-    path:"/dashboard",
-    element: <Dashboard/>,
-    children:[
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
         {
             path: "/dashboard",
-            element: <AllBlogs/>
+            element: <AllBlogs />
         },
         {
             path: "all_blogs",
-            element: <AllBlogs/>
+            element: <AllBlogs />,
         },
         {
             path: "add_a_blog",
-            element: <AddBlogs/>
+            element: <AddBlogs />
+        },
+        {
+            path:"all_blogs/:editId",
+            element: <EditBlogs/>
         }
     ]
 }
