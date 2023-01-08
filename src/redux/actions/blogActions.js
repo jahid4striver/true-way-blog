@@ -1,4 +1,4 @@
-import { ADD_CONTENT, DELETE_CONTENT, LOAD_CONTENT, READ_CONTENT, UPDATE_CONTENT } from "../actionTypes/actionTypes"
+import { ADD_CONTENT, ADD_TO_HISTORY, DELETE_CONTENT, FIRST_UPLOAD, LAST_UPLOAD, LOAD_CONTENT, READ_CONTENT, UPDATE_CONTENT } from "../actionTypes/actionTypes"
 
 
 export const loadBlogs= (data)=>{
@@ -31,5 +31,23 @@ export const updateBlogs= (id)=>{
     return {
         type: UPDATE_CONTENT,
         payload: id
+    }
+}
+export const firstUpload= (data)=>{
+    return {
+        type: FIRST_UPLOAD,
+        payload: data
+    }
+}
+export const lastUpload= (data)=>{
+    return {
+        type: LAST_UPLOAD,
+        payload: data
+    }
+}
+export const addToHistory= (data)=>{
+    return {
+        type: ADD_TO_HISTORY,
+        payload: data
     }
 }

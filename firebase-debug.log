@@ -1,0 +1,44 @@
+[debug] [2023-01-08T12:48:57.093Z] ----------------------------------------------------------------------
+[debug] [2023-01-08T12:48:57.094Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2023-01-08T12:48:57.095Z] CLI Version:   10.6.0
+[debug] [2023-01-08T12:48:57.095Z] Platform:      darwin
+[debug] [2023-01-08T12:48:57.095Z] Node Version:  v16.14.0
+[debug] [2023-01-08T12:48:57.096Z] Time:          Sun Jan 08 2023 18:48:57 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-01-08T12:48:57.096Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-08T12:48:57.158Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-08T12:48:57.158Z] > authorizing via signed-in user (shujonmnt@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/mac/Desktop/My Folder/CWD/React-Redux/true-way-blog
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-01-08T12:49:01.949Z] Using project from CLI flag: true-way-blog
+[debug] [2023-01-08T12:49:01.952Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/true-way-blog [none]
+[debug] [2023-01-08T12:49:05.951Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/true-way-blog 200
+[debug] [2023-01-08T12:49:05.951Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/true-way-blog {"projectId":"true-way-blog","projectNumber":"1016538611932","displayName":"true-way-blog","name":"projects/true-way-blog","resources":{"hostingSite":"true-way-blog"},"state":"ACTIVE","etag":"1_be289477-acc5-41a8-8aa2-b7d6aeb09d6b"}
+[info] i  Using project true-way-blog (true-way-blog) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

@@ -1,20 +1,25 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useNavigation } from 'react-router-dom';
+import { firstUpload, lastUpload } from '../../redux/actions/blogActions';
 import Blogs from './Blogs';
 
 const Home = () => {
+    // const dispatch = useDispatch();
+    // const location= useNavigation();
+    // const data = useSelector((state) => state.blogs.blogs)
+    // console.log(location);
+
+
+    
+    
+
+    // console.log(sorted1);
+    // console.log(sorted2);
+    // onClick={() => dispatch(firstUpload(sorted1))}
+    // onClick={() => dispatch(lastUpload(sorted2))}
     return (
         <div className='mt-10'>
-            <div>
-                
-            </div>
-            <div className='flex justify-between my-4'>
-                <h1 className='text-2xl text-blue-900 font-bold'>Recent Blogs</h1>
-                <select className="select select-info w-40 max-w-xs">
-                    <option disabled selected>Sort By</option>
-                    <option>Sort by last upload</option>
-                    <option>Sort by last upload</option>
-                </select>
-            </div>
             <Blogs />
         </div>
     );

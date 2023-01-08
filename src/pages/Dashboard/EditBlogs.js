@@ -10,7 +10,7 @@ const EditBlogs = () => {
     const dispatch= useDispatch();
 
     const blogs=useSelector((state)=> state.blogs.blogs);
-    const addblog=useSelector((state)=> state.blogs.addblog);
+    // const addblog=useSelector((state)=> state.blogs.addblog);
 
 // Updaing Default Value Getting Start
     const editingBlog= blogs.filter(blog=> blog._id===editId);
@@ -47,7 +47,7 @@ const EditBlogs = () => {
 
     return (
         <div className='shadow-lg p-5'>
-            <h1 className='text-center mb-4 text-2xl'>Add a New Blog</h1>
+            <h1 className='text-center mb-4 text-2xl'>Update Blog</h1>
             <form onSubmit={handleSubmit(submitForm)} className='grid grid-cols-3 gap-4'>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">

@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "true-way-blog",
+    "true-way-blog-client": "true-way-blog"
+  },
+  "targets": {}
+}

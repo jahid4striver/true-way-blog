@@ -2,7 +2,7 @@ import { addBlogs } from "../../actions/blogActions";
 
 const addBlogToServer=(blog)=>{
     return async (dispatch, getState)=>{
-        const res= await fetch('http://localhost:5000/blog', {
+        const res= await fetch('http://truewayblog.clearsoftwares.xyz/blog', {
             method: "POST",
             headers:{
                 "content-type": "application/json"

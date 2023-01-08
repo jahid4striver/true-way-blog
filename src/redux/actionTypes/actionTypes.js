@@ -4,3 +4,6 @@ export const READ_CONTENT= "READ_CONTENT";
 export const ADD_CONTENT= "ADD_CONTENT";
 export const DELETE_CONTENT= "DELETE_CONTENT";
 export const UPDATE_CONTENT= "UPDATE_CONTENT";
+export const FIRST_UPLOAD= "FIRST_UPLOAD";
+export const LAST_UPLOAD= "LAST_UPLOAD";
+export const ADD_TO_HISTORY= "ADD_TO_HISTORY";

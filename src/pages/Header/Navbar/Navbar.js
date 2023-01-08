@@ -21,7 +21,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li className='hover:bg-light-white duration-500'><Link to="/">Home</Link></li>
                     <li className='hover:bg-light-white duration-500'><Link to="/dashboard">Dashboard</Link></li>
-                    <li className='hover:bg-light-white duration-500'><Link to="/">History</Link></li>
+                    <li className='hover:bg-light-white duration-500'><Link to="/history">History</Link></li>
                 </ul>
             </div>
         </div>

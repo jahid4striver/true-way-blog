@@ -2,6 +2,7 @@ import AddBlogs from "../pages/Dashboard/AddBlogs";
 import AllBlogs from "../pages/Dashboard/AllBlogs";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import EditBlogs from "../pages/Dashboard/EditBlogs";
+import History from "../pages/Home/History";
 import Home from "../pages/Home/Home";
 import ReadBlogs from "../pages/Home/ReadBlogs";
 
@@ -19,9 +20,14 @@ const routes = createBrowserRouter([{
             element: <Home />,
         },
         {
+            path:"/history",
+            element: <History/>
+        },
+        {
             path: "/:blogId",
             element: <ReadBlogs />
         }
+    
     ],
 
 },

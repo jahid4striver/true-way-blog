@@ -1,7 +1,7 @@
 
 const updateBlogToServer=(id, blog)=>{
     return async (dispatch, getState)=>{
-        const res= await fetch(`http://localhost:5000/blog/${id}`, {
+        const res= await fetch(`http://truewayblog.clearsoftwares.xyz/blog/${id}`, {
             method: "PUT",
             headers:{
                 "content-type": "application/json"
